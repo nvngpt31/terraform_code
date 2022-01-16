@@ -96,3 +96,66 @@ kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 kubeadm token create --print-join-command
 
 run the output command on worker nodes with sudo 
+
+Kubernetes Objects are persistent data entities stored by Kubernetes. They represent the state of your cluster. 
+
+PODS - A group of one or more containers, with shared storage and network resources, with a specification for how to run the containers. There are many different types of Kubernetes Objects. Perhaps the most important is called the Pod. Pods are used to run and manage containers. 
+
+POD specification basic - 
+kind - it specifies the object type as POD. 
+
+
+YAML - Kubernets objects are usually represented in the form of YAML data. 
+
+apiVersion - The apiVersion in a YAML document specifies which version of the Kubernetes API the YAML data is compatiable with. 
+
+Kubectl - it allows to run commands against K8s clusters. It can be used to deploy applications, inspect, and manage cluster resources, and view logs. It let you view, create, modify, and delete Kubneretes Objects. 
+
+cloud_user@k8s-control:~$ cat myservice.yml
+apiVersion: v1
+kind: Service
+metadata:
+  name: myservice
+spec:
+  selector:
+    app: myapp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+
+
+kubectl create -f myservice.yml --save-config
+kubectl describe service myservice
+kubectl apply -f myservice.yml
+kubectl delete service myservice
+
+vi nginx-pod.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 80
+
+kubectl create -f nginx-pod.yml
+
+vi redis-pod.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis
+spec:
+  containers:
+  - name: redis
+    image: redis
+
+kubectl create -f redis-pod.yml
+kubectl get pods -o wide
+curl <nginx IP address>
+kubectl logs nginx
+
