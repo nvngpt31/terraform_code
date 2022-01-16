@@ -159,3 +159,7 @@ kubectl get pods -o wide
 curl <nginx IP address>
 kubectl logs nginx
 
+
+AKE - Azure Kubernetes Services
+GKE - Google Kubernetes Services
+AWS Kubernetes
