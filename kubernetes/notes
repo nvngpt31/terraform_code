@@ -162,4 +162,4 @@ kubectl logs nginx
 
 AKE - Azure Kubernetes Services
 GKE - Google Kubernetes Services
-AWS Kubernetes
+Amazon EKS - Amazon Elastic Kubernetes Service
