@@ -1,0 +1,13 @@
+#PUT 
+1. PUT is idempotent.
+Idempotent means if we try a request N or multiple times, that should be eqvivalent to a single request invocation. 
+
+2. Put 
+
+
+
+
+
+#POST
+1. POST is not idempotent
+Not Idempotent - means if we try a request N or multiple times, that would create or update or modify the resources N number of times. 

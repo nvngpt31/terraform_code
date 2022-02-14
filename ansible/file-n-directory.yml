@@ -1,0 +1,7 @@
+---
+- name: Creating filesystem on remote server
+  hosts: All
+  become: yes
+  become_user: root
+  tasks:
+    - name: 

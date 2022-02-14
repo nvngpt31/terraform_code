@@ -1,0 +1,28 @@
+Q1- What is kubernetes or k8?
+Ans - K8 is an open-source container orchestration system for automating software deployment, scaling and management. It was origanally designed by google, but the CNCF ( Cloud Native Computing Foundation ) now maintains the project. 
+
+Q2- Which version of k8 in exam?
+Ans - Currently using 1.22 on February 8, 2022. 
+
+k8 Basics -
+1. What is kubernetes? see above note
+
+2. What is k8s? 
+Ans - k8s is abbreviation for kubernetes. The 8 represents 8 letters between K ans S. 
+
+3. What is kubernetes cluster? 
+Ans - A k8s cluster is a set of nodes that run containerized applications. This cluster consists the clontrol plane and a set of machine called nodes. 
+
+4. What are the features? 
+Ans - Container orchestration, Aplication reliability, Automation  
+
+Q5 - What is k8s architecture? A control plane, worker node?
+Ans - 
+
+Control Plane - The control plane controls the cluster. The control plane components can run on any machine in the cluster, but run on dedicated controller machines. Control plan responsible to manage the cluster globally in cluster. 
+
+Control Plane components -
+1) kube-api-server - Primary interface to the control plane and cluster itself. 
+2) etcd - It is the backend datastore for k8s cluster. It provides high availbility storage for all the data relating to state of the cluster. 
+3) kube-scheduler - It handles scheduling, the process of selecting an available node in the cluster on which to run containers. 
+
