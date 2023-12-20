@@ -1,1 +1,0 @@
-"c:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" "C:\Users\<username>\Desktop\ConnectRDP.ps1"
